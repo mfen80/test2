@@ -9,11 +9,11 @@ Dotenv.load
 # GitHub authentication
 # You'll need to create a .env file with your GitHub personal access token
 # Format: GITHUB_ACCESS_TOKEN=your_token_here
-client = Octokit::Client.new(access_token: ENV['GITHUB_ACCESS_TOKEN'])
+client = Octokit::Client.new(access_token: ENV[$GITHUB_TOKEN])
 
 # Repository to analyze - update these variables with your repository info
-repo_owner = 'your_github_username'
-repo_name = 'your_repo_name'
+repo_owner = mfen80
+repo_name = test2
 full_repo_name = "#{repo_owner}/#{repo_name}"
 
 puts "Fetching PR data from #{full_repo_name}..."
